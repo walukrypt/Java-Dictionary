@@ -1,8 +1,0 @@
-(Keyword)
-The keyword 'if' is used to start the declaration of a conditional statement. The content of an if statement is executed if and only if the condition of that statement is satisfied.
-
-Example
-int x = 3;
-if(x == 3){
-	System.out.println("x is 3");
-	}
