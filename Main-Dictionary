@@ -48,6 +48,7 @@ If we run the example above, 'Hey' will be printed just twice (despite the fact 
 
 byte:
 	(keyword, data type)
+byte is one of eight data types in Java and it indicates an 8-bit whole number. Values of type 'byte' cannot contain a decimal point. The wrapper class for the type 'byte' is Byte.
 
 *****************************************************************************************************************************
 
@@ -63,6 +64,7 @@ catch:
 
 char:
 	(keyword, data type)
+int is one of eight data types in Java and it indicates a character (a single letter, digit or a symbol). The wrapper class for the type char is Character. When declaring a variable of type char, the value must be surrounded by single quotes.\ne.g\tchar a = 'w';
 
 *****************************************************************************************************************************
 
@@ -74,6 +76,7 @@ A class is a blueprint of an object and it might contain one or more methods.
 
 const:
 	(keyword)
+This keyword doesn't actually have any meaning in Java. But it's still a reserved keyword anyway.
 
 *****************************************************************************************************************************
 
@@ -114,7 +117,7 @@ do-while:
 
 double:
 	(keyword, data type)
-
+double is one of eight data types in Java and it indicates a 64-bit number. Values of type 'double' are floating-point numbers and hence, can contain a decimal point. The wrapper class for the type 'double' is Double.
 *****************************************************************************************************************************
 
 else if:
@@ -152,6 +155,12 @@ The keyword 'extends' is used in class declarations to state that a class is a s
 
 false:
 	(keyword, boolean value)
+false is one of the only two possible boolean values. Also, false could also indicate that a particular condition is NOT met.
+
+EXAMPLE
+	boolean bool = ((2 + 2) == 4);
+
+The variable bool above is true because 2 + 2 is 4.
 
 *****************************************************************************************************************************
 
@@ -167,6 +176,7 @@ finally:
 
 float:
 	(keyword, data type)
+float is one of eight data types in Java and it indicates a 32-bit number. Values of type 'float' are floating-point numbers and hence, can contain a decimal point. The wrapper class for the type 'float' is Float.
 
 *****************************************************************************************************************************
 
@@ -182,6 +192,7 @@ foreach:
 
 goto:
 	(keyword)
+This keyword doesn't actually have any meaning in Java. But it's still a reserved keyword anyway.
 
 *****************************************************************************************************************************
 
@@ -220,6 +231,7 @@ instanceof:
 
 int:
 	(keyword, data type)
+int is one of eight data types in Java and it indicates a 32-bit whole number. Values of type 'int' cannot contain a decimal point. The wrapper class for the type 'int' is Integer.
 
 *****************************************************************************************************************************
 
@@ -252,6 +264,7 @@ Label:
 
 long:
 	(keyword, data type)
+long is one of eight data types in Java and it indicates a 64-bit signed integer. Values of type 'long' cannot contain a decimal point. The wrapper class for the type 'long' is Long.
 
 *****************************************************************************************************************************
 
@@ -313,6 +326,7 @@ A package is a collection of classes and other logically related definitions. Al
 
 package-private:
 	(Access-Modifier)
+This is the default state of any field declared without a modifier. It means that field can be seen and accessed from any other class within the same package.
 
 *****************************************************************************************************************************
 
@@ -323,33 +337,56 @@ Polymorphism:
 
 *****************************************************************************************************************************
 
-print:
+print():
 	(method)
+The print() method is written as System.out.print() and it is used for displaying a set of characters on a command window. The print() method doesn't automatically generate a new line after printing out and that differentiates it from other standard output methods. The argument for the print() method is usually the variable or String to be printed out.
+
+EXAMPLE
+	(i)	System.out.print("Hello guys!");
+
+	(ii)	int number = 4;
+		System.out.print(number);
 
 *****************************************************************************************************************************
 
-printf:
+printf():
 	(method)
+The printf() method is written as System.out.printf() and it is used for displaying a set of characters on a command window in a formatted way. The printf() method makes use of escape characters for formatting. These escape characters start with a backslash and a particular character. The printf() method takes two or more arguments; the first is a sequence of escape characters which define the format of the characters to be printed out. The arguments that follow represent the variables to be printed.
+
+EXAMPLE
+	String name = "Zinet";
+	int age = 48;
+	System.out.printf("%s is %d", name, age);
 
 *****************************************************************************************************************************
 
 private:
 	(keyword, Access-modifier)
+If a field is declared private, it means that field can be seen and accessed ONLY within its own class. Outside its class, it is totally invisible and inaccessible (even to subclasses).
 
 *****************************************************************************************************************************
 
 protected:
 	(keyword, Access-modifier)
+If a field is declared protected, it means that variable or method can be seen and accessed from its own class, its subclasses and any other class in the same package.
 
 *****************************************************************************************************************************
 
-println:
+println():
 	(method)
+The println() method is written as System.out.println() and it is used for displaying a set of characters on a command window. The println() method automatically generates a new line after printing out and that differentiates it from other standard output methods. The argument for the println() method is usually the variable or String to be printed out.
+
+EXAMPLE
+	(i)	System.out.println("Hello guys!");
+
+	(ii)	int number = 4;
+		System.out.println(number);
 
 *****************************************************************************************************************************
 
 public:
 	(Access-modifier, keyword)
+If a field is declared public, it means that field can be seen and accessed from any other class.
 
 *****************************************************************************************************************************
 
@@ -367,6 +404,7 @@ The keyword 'return' is used to terminate a method and probably return (produce)
 
 short:
 	(keyword, data type)
+short is one of eight data types in Java and it indicates a 16-bit whole number. Values of type 'short' cannot contain a decimal point. The wrapper class for the type 'short' is Short.
 
 *****************************************************************************************************************************
 
@@ -458,6 +496,12 @@ transient:
 
 true:
 	(keyword, boolean value)
+true is one of the only two possible boolean values. Also, true could also indicate that a particular condition is met.
+
+EXAMPLE
+	boolean bool = ((2 + 2) == 4);
+
+The variable bool above is true because 2 + 2 is 4.
 
 *****************************************************************************************************************************
 try:
