@@ -16,7 +16,7 @@ assert:
 
 boolean:
 	(keyword, data type)
-boolean is one of eight primitive data types in Java. The boolean data type has only two possible values: true and false (null is not a boolean value).
+The type 'boolean' is one of eight primitive data types in Java. The boolean data type has only two possible values: true and false (null is not a boolean value).
 
 *****************************************************************************************************************************
 
