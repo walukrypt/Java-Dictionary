@@ -72,6 +72,10 @@ In the example above, case 2 is executed because it matches the argument.
 
 *****************************************************************************************************************************
 
+cast:
+
+*****************************************************************************************************************************
+
 catch:
 	(keyword)
 A catch statement immediately follows a try statement. There can be multiple catch statements after a catch block each containing instructions for handling different types of exceptions. If an exception is thrown within a try block, it is compared to any of the catch statements. If it matches, the exception will be executed.
@@ -174,6 +178,24 @@ EXAMPLE:
 double:
 	(keyword, data type)
 double is one of eight data types in Java and it indicates a 64-bit number. Values of type 'double' are floating-point numbers and hence, can contain a decimal point. The wrapper class for the type 'double' is Double.
+
+*****************************************************************************************************************************
+
+else:
+	(keyword)
+An else statement is an optional extension of an 'if statement' and it provides an alternate flow just in case the condition of the if statement isn't met. An else statement cannot have an argument and it either comes after an 'if statement' or an 'else-if' statement and it represents the final part of an if-block.
+
+EXAMPLE:
+	int x = 4;
+		if(x == 3){
+			System.out.println("x is 3");
+			}
+		else{
+			System.out.println("do nothing");
+
+
+In the example above, the instructions in the else statement are executed because the condition of the if statement isn't met.
+
 *****************************************************************************************************************************
 
 else if:
@@ -194,23 +216,6 @@ EXAMPLE:
 			System.out.println("x is not in range");
 			}
 	
-*****************************************************************************************************************************
-
-else:
-	(keyword)
-An else statement is an optional extension of an 'if statement' and it provides an alternate flow just in case the condition of the if statement isn't met. An else statement cannot have an argument and it either comes after an 'if statement' or an 'else-if' statement and it represents the final part of an if-block.
-
-EXAMPLE:
-	int x = 4;
-		if(x == 3){
-			System.out.println("x is 3");
-			}
-		else{
-			System.out.println("do nothing");
-
-
-In the example above, the instructions in the else statement are executed because the condition of the if statement isn't met.
-
 *****************************************************************************************************************************
 
 enum:
@@ -462,18 +467,6 @@ EXAMPLE
 
 *****************************************************************************************************************************
 
-private:
-	(keyword, Access-modifier)
-If a field is declared private, it means that field can be seen and accessed ONLY within its own class. Outside its class, it is totally invisible and inaccessible (even to subclasses).
-
-*****************************************************************************************************************************
-
-protected:
-	(keyword, Access-modifier)
-If a field is declared protected, it means that variable or method can be seen and accessed from its own class, its subclasses and any other class in the same package.
-
-*****************************************************************************************************************************
-
 println():
 	(method)
 The println() method is written as System.out.println() and it is used for displaying a set of characters on a command window. The println() method automatically generates a new line after printing out and that differentiates it from other standard output methods. The argument for the println() method is usually the variable or String to be printed out.
@@ -483,6 +476,18 @@ EXAMPLE
 
 	(ii)	int number = 4;
 		System.out.println(number);
+
+*****************************************************************************************************************************
+
+private:
+	(keyword, Access-modifier)
+If a field is declared private, it means that field can be seen and accessed ONLY within its own class. Outside its class, it is totally invisible and inaccessible (even to subclasses).
+
+*****************************************************************************************************************************
+
+protected:
+	(keyword, Access-modifier)
+If a field is declared protected, it means that variable or method can be seen and accessed from its own class, its subclasses and any other class in the same package.
 
 *****************************************************************************************************************************
 
@@ -522,7 +527,6 @@ strictfp:
 
 String:
 	(keyword, data type)
-
 
 *****************************************************************************************************************************
 
