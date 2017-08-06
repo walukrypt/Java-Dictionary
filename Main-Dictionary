@@ -14,14 +14,6 @@ assert:
 
 *****************************************************************************************************************************
 
-BigInteger:
-
-*****************************************************************************************************************************
-
-BigDecimal:
-
-*****************************************************************************************************************************
-
 boolean:
 	(keyword, data type)
 boolean is one of eight primitive data types in Java. The boolean data type has only two possible values: true and false (null is not a boolean value).
@@ -46,6 +38,11 @@ If we run the example above, 'Hey' will be printed just twice (despite the fact 
 
 *****************************************************************************************************************************
 
+Bug:
+A bug is also known as an error and it represents anything that brings undesired results or causes a program to terminate.
+
+*****************************************************************************************************************************
+
 byte:
 	(keyword, data type)
 byte is one of eight data types in Java and it indicates an 8-bit whole number. Values of type 'byte' cannot contain a decimal point. The wrapper class for the type 'byte' is Byte.
@@ -54,11 +51,44 @@ byte is one of eight data types in Java and it indicates an 8-bit whole number. 
 
 case:
 	(keyword)
+case is a keyword used in switch statements. A case represents an option or a path through which execution can flow. Usually, the argument of the switch statement is usually compared with each case and the first one that matches is executed.
+
+EXAMPLE
+	int a = 2;
+	switch(a){
+		case 1:
+			System.out.println("a is 1");
+			break;
+		case 2:
+			System.out.println("a is 2");
+			break;
+		case 3:
+			System.out.println("a is 3");
+			break;
+			break;
+		}//end of switch-case statement
+
+In the example above, case 2 is executed because it matches the argument.
 
 *****************************************************************************************************************************
 
 catch:
 	(keyword)
+A catch statement immediately follows a try statement. There can be multiple catch statements after a catch block each containing instructions for handling different types of exceptions. If an exception is thrown within a try block, it is compared to any of the catch statements. If it matches, the exception will be executed.
+
+Example
+	try{
+		int a = 10;
+		int b = 0;
+		int quotient = a/b;
+		}
+	catch(ArithmeticException a){
+		System.out.println("Cannot perform this operation");
+		}
+
+
+
+It is impossible to divide by zero in Java; therefore, ordinarily, the code above should flag an error. However, this has been taken care of by the try and catch block. When the 'a/b' part is about to be executed, an Arithmetic Exception is thrown and the JVM checks for a catch statement that can handle this type of exception.
 
 *****************************************************************************************************************************
 
@@ -81,6 +111,7 @@ This keyword doesn't actually have any meaning in Java. But it's still a reserve
 *****************************************************************************************************************************
 
 Compile:
+Compilation is the first stage in processing a Java program after saving. Suppose we have a Java program called Deborah.java . Compiling it would change the name to Deborah.class and it'd be saved in a format called a bytecode. The role of the JVM is to convert bytecodes to executable instructions that the computer can process directly.
 
 *****************************************************************************************************************************
 
@@ -103,15 +134,40 @@ If we run the code snippet above, 'Hey' will be printed out just twice. During t
 
 default:
 	(keyword)
+The default keyword is used in switch statements as a last resort just in case none of the switch statements match the argument of the switch statement.
+
+EXAMPLE
+	int a = 6;
+	switch(a){
+		case 1:
+			System.out.println("a is 1");
+			break;
+		case 2:
+			System.out.println("a is 2");
+			break;
+		case 3:
+			System.out.println("a is 3");
+			break;
+		default:
+			System.out.println("a is not within the range");
+			break;
+		}//end of switch-case statement
+
+
+In the example above, the default statement is executed because none of the cases match the argument of the switch statement.
 
 *****************************************************************************************************************************
 
 do:
 	(keyword)
+The keyword 'do' starts a do-while loop. The do-while loop is functionally similar to a while loop except that the condition in the while statement is usually evaluated after the instructions are executed.
 
-*****************************************************************************************************************************
-
-do-while:
+EXAMPLE:
+	int x = 2;
+	do{
+		Systemout.println("Taslim Oseni");
+		}
+	while(x < 4);
 
 *****************************************************************************************************************************
 
@@ -121,19 +177,49 @@ double is one of eight data types in Java and it indicates a 64-bit number. Valu
 *****************************************************************************************************************************
 
 else if:
+An else if statement is an optional extension of an 'if statement' and it creates alternative flows just in case the condition of the 'if statement' or previous 'else if' statements are not met. There can be multiple consecutive 'else if' statements. else if statements bear arguments.
+
+EXAMPLE:
+	int x = 2;
+		if(x == 1){
+			System.out.println("x is 1");
+			}
+		else if(x == 2){
+			System.out.println("x is 2");
+			}
+		else if(x == 3){
+			System.out.println("x is 3");
+			}
+		else{
+			System.out.println("x is not in range");
+			}
 	
 *****************************************************************************************************************************
 
 else:
 	(keyword)
+An else statement is an optional extension of an 'if statement' and it provides an alternate flow just in case the condition of the if statement isn't met. An else statement cannot have an argument and it either comes after an 'if statement' or an 'else-if' statement and it represents the final part of an if-block.
+
+EXAMPLE:
+	int x = 4;
+		if(x == 3){
+			System.out.println("x is 3");
+			}
+		else{
+			System.out.println("do nothing");
+
+
+In the example above, the instructions in the else statement are executed because the condition of the if statement isn't met.
 
 *****************************************************************************************************************************
 
 enum:
 	(keyword)
+An enum stands for enumeration and it is used to create a newly defined type (i.e a bunch of values that a variable can have). Enums can have parameters and can be passed into methods.
 *****************************************************************************************************************************
 
 Error:
+Anything that causes a program to terminate or bring undesired results is an error.
 
 *****************************************************************************************************************************
 
@@ -171,6 +257,7 @@ final:
 
 finally:
 	(keyword)
+A finally block (optionally) comes after a try and catch block. The contents of a finally statement are always executed no matter what.
 
 *****************************************************************************************************************************
 
@@ -182,6 +269,19 @@ float is one of eight data types in Java and it indicates a 32-bit number. Value
 
 for:
 	(keyword)
+A for loop repeatedly executes a set of instructions as long as certain conditions are met.
+
+EXAMPLE:
+	for(int i = 1; i <= 3; i++){
+		System.out.println(i);
+		}
+
+The for loop above has three parameters; the first one (int i = 0) represents the declaration of the counter variable. The counter variable is very necessary; it helps to keep track of the number of iterations so far. The second parameter (i < 3) describes the boundary of the loop. The loop will always be repeated as long as this condition is met (i.e as long as i is less than or equal to 3). The final parameter of the for loop (i++) indicates direction. In our example, it means after each iteration, i increases by 1.
+If we run our code snippet, we have:
+	1
+	2
+	2 
+
 
 *****************************************************************************************************************************
 
@@ -198,13 +298,16 @@ This keyword doesn't actually have any meaning in Java. But it's still a reserve
 
 if:
 	(keyword)
-The keyword 'if' is used to start the declaration of an 'if statement'. The content of an if statement is executed if and only if its condition is satisfied.
+The if statement in Java is a type of selective statement. The content of an if statement is executed if and only if its condition is satisfied. An if statement MIGHT be followed by an 'else if' or 'else' statement.
 
 	EXAMPLE:
 		int x = 3;
 		if(x == 3){
 			System.out.println("x is 3");
 			}
+		else{
+			System.out.println("do nothing");
+
 
 The if statement in the code snippet above is executed because the condition (x == 3) is satisfied (true). If x was 4, nothing would be printed out because the condition won't be satisfied, the entire if statement would therefore be skipped.
 
@@ -217,6 +320,15 @@ implements:
 
 import:
 	(keyword)
+An import statement is used to introduce other classes or packages into a class. If we import a particular class, all the class's methods become available and accessible.
+
+EXAMPLE
+	import java.util.Scanner;
+
+The import statement above makes available the Scanner class. After importing, we can create an object of the class and use the class's methods.
+We can import all the classes under a package at once by using the '*' character:
+
+	import java.util.*;
 
 *****************************************************************************************************************************
 
@@ -241,11 +353,6 @@ interface:
 *****************************************************************************************************************************
 
 Iteration:
-
-*****************************************************************************************************************************
-
-IOException:
-	(Exception class)
 
 *****************************************************************************************************************************
 Java:
@@ -298,11 +405,6 @@ The keyword 'new' is used when creating an object of an existing class. It is al
 *****************************************************************************************************************************
 
 null:
-
-*****************************************************************************************************************************
-
-NullPointerException:
-	(Exception class)
 
 *****************************************************************************************************************************
 
@@ -423,16 +525,6 @@ String:
 
 *****************************************************************************************************************************
 
-StringBuffer:
-	(class)
-
-*****************************************************************************************************************************
-
-String-Builder:
-	(class)
-
-*****************************************************************************************************************************
-
 super:
 	(keyword)
 The keyword 'super' is used by subclasses to access methods declared in a superclass. The keyword is also used to invoke the constructor of a super class.
@@ -448,6 +540,30 @@ The method above indicates that the superclass contains a method called getPayme
 
 switch:
 	(keyword)
+A switch statement is a selective statement that compares a parameter to numerous cases (options) and follows the first correct path. A case (option) is usually terminated by a 'break' keyword. In scenarios where this 'break' keyword is absent, execution overflows to other cases (options). A default statement can optionally be added after the case(s) and it is executed if none of the cases match the argument.
+
+EXAMPLE
+
+	int a = 2;
+	switch(a){
+		case 1:
+			System.out.println("a is 1");
+			break;
+		case 2:
+			System.out.println("a is 2");
+			break;
+		case 3:
+			System.out.println("a is 3");
+			break;
+		default:
+			System.out.println("a is not within the range");
+			break;
+		}//end of switch-case statement
+
+
+If you run the code snippet above, "a is 2" will be displayed, this is of course because a is equal to 2. What the switch statement does is just compare the argument of the switch statement to each case (option) and look for an equation. If the break keyword wasn't there in case 2, execution will leak continiously until a break keyword is found. This would be printed out:
+	a is 2
+	a is 3
 
 *****************************************************************************************************************************
 
@@ -504,8 +620,24 @@ EXAMPLE
 The variable bool above is true because 2 + 2 is 4.
 
 *****************************************************************************************************************************
+
 try:
 	(keyword)
+The keyword 'try' is used to start a try block. A try block encompasses any code that might throw an exception (cause a program to terminate). A try block must always be followed by a catch statement.
+
+Example
+	try{
+		int a = 10;
+		int b = 0;
+		int quotient = a/b;
+		}
+	catch(ArithmeticException a){
+		System.out.println("Cannot perform this operation");
+		}
+
+
+
+It is impossible to divide by zero in Java; therefore, ordinarily, the code above should flag an error. However, this has been taken care of by the try and catch block. It simply outputs 'Cannot perform this operation'. The try block therefore ensures continuity of a program.
 
 *****************************************************************************************************************************
 
@@ -530,7 +662,18 @@ while
 A while loop repeats instructions over and over again as long as a particular condition is met. A while loop is often preceeded by the keyword 'while' followed by a condition (in parenthesis) and then a body of instruction(s); as long as the condition is met, the instructions will always be executed.
 	
 	Example:
-		while(x >= 2){
-			Systm.out.println("x is greater than or equal to 2");
+		int x = 1;
+		while(x >= 3){
+			System.out.println("x is greater than or equal to 2");
+			x++;
 			}
+
+
+If you run the example above, this would be displayed:
+
+	x is greater than or equal to 2
+	x is greater than or equal to 2
+	x is greater than or equal to 2
+
+	As long as the condition is met, the instructions of the while loop keeeps getting executed. It stops only when the condition returns false.
 *****************************************************************************************************************************
